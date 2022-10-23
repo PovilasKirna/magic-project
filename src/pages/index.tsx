@@ -9,7 +9,7 @@ export default function Home() {
 
 	const isInView = useInView(ref);
 
-	const handleClick = () => {
+	const handleScrollClick = () => {
 		page1.current?.scrollIntoView({ behavior: "smooth" });
 	};
 
@@ -24,7 +24,7 @@ export default function Home() {
 					className="box flex flex-col justify-center items-center h-20"
 					whileHover={{ scale: 1.2 }}
 					whileTap={{ scale: 1.1 }}
-					onClick={handleClick}
+					onClick={handleScrollClick}
 				>
 					<span></span>
 					<span></span>
