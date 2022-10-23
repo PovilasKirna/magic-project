@@ -6,6 +6,20 @@ body {
 	@apply bg-slate-800 text-white;
 }
 
+/* Scroll bar hide */
+
+/* Chrome, Safari and Opera */
+::-webkit-scrollbar {
+	display: none;
+}
+/* Edge, Firefox */
+body,
+html {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+}
+
 /* scrolldown indicator homepage */
 .box span {
 	width: 20px;
