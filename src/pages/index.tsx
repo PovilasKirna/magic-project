@@ -18,7 +18,7 @@ export default function Home() {
 			<Nav />
 			<motion.div className="w-screen h-screen" id="0" ref={page0}>
 				<div className="text-5xl font-bold text-center h-4/5 flex flex-row items-center justify-center">
-					Who doesn't like magic?
+					Who doesn&apos;t like magic?
 				</div>
 				<motion.div
 					className="box flex flex-col justify-center items-center h-20"
