@@ -1,0 +1,50 @@
+/* import Rubik and Lobster fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Rubik:wght@800&display=swap");
+
+.side {
+	display: grid;
+	height: 100vh;
+	overflow: hidden;
+	place-items: center;
+	position: absolute;
+	width: 100%;
+}
+
+.side .title {
+	font-family: "Rubik", sans-serif;
+	font-size: 8vw;
+	margin: 0px 10vw;
+	width: 80vw;
+}
+
+.side .fancy {
+	font-family: "Lobster", cursive;
+	font-size: 1.3em;
+	line-height: 0.8em;
+}
+
+#leftSide {
+	background-color: var(--left-color);
+	width: 60%;
+	z-index: 2;
+}
+
+#leftSide .title {
+	color: white;
+}
+
+#leftSide .fancy {
+	color: var(--right-color);
+}
+
+#rightSide {
+	background-color: var(--right-color);
+}
+
+#rightSide .title {
+	color: var(--dark);
+}
+
+#rightSide .fancy {
+	color: white;
+}

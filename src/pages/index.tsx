@@ -1,6 +1,5 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
-import Nav from "../components/nav";
 
 export default function Home() {
 	const ref = useRef<null | HTMLDivElement>(null);
@@ -15,7 +14,6 @@ export default function Home() {
 
 	return (
 		<>
-			<Nav />
 			<motion.div className="w-screen h-screen" id="0" ref={page0}>
 				<div className="text-5xl font-bold text-center h-4/5 flex flex-row items-center justify-center">
 					Who doesn&apos;t like magic?

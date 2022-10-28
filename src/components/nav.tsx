@@ -1,7 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+//import github icon from fontawesome
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Nav() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -10,22 +13,9 @@ export default function Nav() {
 		setIsOpen(!isOpen);
 	};
 
-	useEffect(() => {
-		console.log(isOpen);
-	}, [isOpen]);
-
-	//use a timer to check if user has scrolled
-	//if so, close the menu
-	//if not, keep it open
-	//if user clicks on menu, keep it open
-	//if user clicks on menu again, close it
-	//if user clicks on a link, close it
-
 	return (
 		<>
-			{/* define a simple nav sticked to the top of the page*/}
-			{/* collapse the nav to a hamburger if scren is a phone*/}
-			<nav className="flex items-center justify-between sm:justify-center flex-wrap backdrop-blur bg-slate/50 p-3 px-10 sticky top-0 z-50  select-none  ">
+			<nav className="flex items-center justify-between sm:justify-center flex-wrap backdrop-blur bg-slate/50 p-3 px-10 sticky top-0 z-50  select-none ">
 				{/* logo */}
 				<motion.div
 					className="flex items-center flex-shrink-0 text-white mr-6"
@@ -51,12 +41,20 @@ export default function Nav() {
 				</motion.div>
 				{/* menu */}
 				<div className="hidden sm:flex sm:flex-row">
-					<div className="p-2">Item</div>
-					<div className="p-2">Item</div>
-					<div className="p-2">Item</div>
-					<div className="p-2">Item</div>
-					<div className="p-2">Item</div>
-					<div className="p-2">Item</div>
+					<motion.div className="p-2" whileHover={{ scale: 1.2 }}>
+						<Link href={"/"}>Home</Link>
+					</motion.div>
+					<motion.div className="p-2" whileHover={{ scale: 1.2 }}>
+						<Link href={"/services"}>Services</Link>
+					</motion.div>
+					<motion.div className="p-2" whileHover={{ scale: 1.2 }}>
+						<Link href={"/about"}>About</Link>
+					</motion.div>
+					<motion.div className="p-2" whileHover={{ scale: 1.2 }}>
+						<Link href={"/github.com"}>
+							<FontAwesomeIcon icon={faGithub} />
+						</Link>{" "}
+					</motion.div>
 				</div>
 			</nav>
 			<AnimatePresence>
